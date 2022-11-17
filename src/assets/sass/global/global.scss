@@ -1,0 +1,48 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--app-font-family);
+  font-size: var(--app-font-size);
+  line-height: var(--app-line-height);
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+:global #app {
+  display: grid;
+  align-content: start;
+  min-height: 100%;
+  margin: 0;
+  padding: $offet-app 50px;
+
+  grid-template-rows: min-content 1fr min-content;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0
+}

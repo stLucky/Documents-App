@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+:root {
+  --app-black: #{$black};
+  --app-black-01: #{$black-01};
+  --app-white: #{$white};
+  --app-white-400: #{$white-400};
+  --app-white-300: #{$white-300};
+  --app-gray: #{$gray};
+  --app-gray-400: #{$gray-400};
+  --app-gray-300: #{$gray-300};
+  --app-blue: #{$blue};
+  --app-red: #{$red};
+}

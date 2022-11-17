@@ -1,0 +1,40 @@
+:global .btn {
+  font-family: var(--app-font-family);
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 28px;
+  transition: all 200ms;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    border: 1px solid var(--app-blue);
+    color: var(--app-blue);
+
+    &:hover {
+      background-color: var(--app-blue);
+      color: var(--app-white);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid var(--app-red);
+    color: var(--app-red);
+
+    &:hover {
+      background-color: var(--app-red);
+      color: var(--app-white);
+    }
+  }
+
+  &--link {
+    padding: 0;
+
+    &:hover {
+      color: var(--app-blue);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use './variables' as *;
+
+:root {
+  --app-top-offset: #{2 * $offet-app + $offset-header + $height-header};
+  --header-offset: #{$offset-header};
+  --header-height: #{$height-header};
+}
