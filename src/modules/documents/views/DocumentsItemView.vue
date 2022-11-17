@@ -50,7 +50,7 @@ const id = computed(() => route.params.id);
 const document = computed(() => getDocument(Number(id.value)));
 watch(document, () => {
   if (!document.value) {
-    router.replace({ name: "documents.view" });
+    router.replace({ name: "documents.item.view" });
   }
 });
 </script>

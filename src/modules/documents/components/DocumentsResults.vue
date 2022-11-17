@@ -13,6 +13,7 @@
           :to="{ name: 'documents.item.view', params: { id: document.id } }"
           :class="$style.link"
           :active-class="$style.active"
+          replace
         >
           <div :class="$style.imageWrap" v-if="!document.image">
             <IconImageStub width="30" />

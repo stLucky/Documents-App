@@ -5,13 +5,12 @@ import DocumentsItemView from "./views/DocumentsItemView.vue";
 export default {
   path: "/documents",
   component: DocumentsView,
-  name: 'documents.view',
+  name: "documents.view",
   children: [
     {
-      path: ":id",
+      path: ":id?",
       name: "documents.item.view",
       component: DocumentsItemView,
-      alias: "",
     },
   ],
 };

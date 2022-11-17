@@ -13,18 +13,26 @@
 import { watch } from "vue";
 import { useCounterStore } from "@/stores";
 import { useDebouncedRef } from "@/helpers";
+import { useRoute } from "vue-router";
 
+const route = useRoute();
 const store = useCounterStore();
 const { fetchDocuments, clearDocuments } = store;
 
-const id = useDebouncedRef("");
-watch(id, () => {
-  if (id.value) {
-    fetchDocuments(id.value);
-  } else {
-    clearDocuments();
-  }
-});
+const idParams = route.params.id as string;
+
+const id = useDebouncedRef(idParams);
+watch(
+  id,
+  () => {
+    if (id.value) {
+      fetchDocuments(id.value);
+    } else {
+      clearDocuments();
+    }
+  },
+  { immediate: true }
+);
 </script>
 
 <style module lang="scss">
